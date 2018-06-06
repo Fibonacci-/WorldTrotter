@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ConversionViewController loaded its view.")
         updateCelsiusLabel()
     }
     
@@ -61,6 +61,26 @@ class ConversionViewController: UIViewController {
         nf.maximumFractionDigits = 1
         return nf
     }()
+    
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
+        let replacementTextHasDecimalSeparator = string.range(of: ".")
+        let replacementTextHasDecimalChar = NSCharacterSet.decimalDigits.isSuperset(of: (CharacterSet(charactersIn: string)))
+        
+        if existingTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil {
+            print("Not entering multiple decimals")
+            return false
+        }else if !replacementTextHasDecimalChar {
+            print("Not entering alpha char")
+            return false
+        } else {
+            return true
+        }
+        
+    }
     
 }
 

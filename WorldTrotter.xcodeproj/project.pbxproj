@@ -14,6 +14,8 @@
 		2F7EF76F201A9A8D00D0C861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7EF76D201A9A8D00D0C861 /* LaunchScreen.storyboard */; };
 		2F7EF77A201A9A8E00D0C861 /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7EF779201A9A8E00D0C861 /* WorldTrotterTests.swift */; };
 		2F7EF785201A9A8E00D0C861 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7EF784201A9A8E00D0C861 /* WorldTrotterUITests.swift */; };
+		2F90570720C75F5B005A27D2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F90570620C75F5B005A27D2 /* MapKit.framework */; };
+		2F90570920C78BA9005A27D2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F90570820C78BA9005A27D2 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2F7EF780201A9A8E00D0C861 /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7EF784201A9A8E00D0C861 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		2F7EF786201A9A8E00D0C861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F90570620C75F5B005A27D2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2F90570820C78BA9005A27D2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F90570720C75F5B005A27D2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,7 @@
 				2F7EF778201A9A8E00D0C861 /* WorldTrotterTests */,
 				2F7EF783201A9A8E00D0C861 /* WorldTrotterUITests */,
 				2F7EF762201A9A8D00D0C861 /* Products */,
+				2F90570520C75F5B005A27D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +106,7 @@
 			children = (
 				2F7EF764201A9A8D00D0C861 /* AppDelegate.swift */,
 				2F7EF768201A9A8D00D0C861 /* Main.storyboard */,
+				2F90570820C78BA9005A27D2 /* MapViewController.swift */,
 				2F7EF76B201A9A8D00D0C861 /* Assets.xcassets */,
 				2F7EF76D201A9A8D00D0C861 /* LaunchScreen.storyboard */,
 				2F7EF770201A9A8D00D0C861 /* Info.plist */,
@@ -123,6 +130,14 @@
 				2F7EF786201A9A8E00D0C861 /* Info.plist */,
 			);
 			path = WorldTrotterUITests;
+			sourceTree = "<group>";
+		};
+		2F90570520C75F5B005A27D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F90570620C75F5B005A27D2 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0901E0207A91CE0031462C /* ConversionViewController.swift in Sources */,
+				2F90570920C78BA9005A27D2 /* MapViewController.swift in Sources */,
 				2F7EF765201A9A8D00D0C861 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.helwigdev.WorldTrotter;
@@ -445,6 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.helwigdev.WorldTrotter;
