@@ -95,6 +95,41 @@
             </objects>
             <point key="canvasLocation" x="854" y="913"/>
         </scene>
+        <!--Web View-->
+        <scene sceneID="rA2-YN-6Vp">
+            <objects>
+                <viewController id="Zgo-We-pox" customClass="WebViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7e-C7-wlL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smu-d9-Uwa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="smu-d9-Uwa" firstAttribute="top" secondItem="hk2-bv-XyB" secondAttribute="top" id="0vP-ym-MUF"/>
+                            <constraint firstItem="smu-d9-Uwa" firstAttribute="trailing" secondItem="hk2-bv-XyB" secondAttribute="trailing" id="Lje-vZ-dHo"/>
+                            <constraint firstItem="smu-d9-Uwa" firstAttribute="leading" secondItem="hk2-bv-XyB" secondAttribute="leading" id="VtK-A0-Z1Y"/>
+                            <constraint firstItem="smu-d9-Uwa" firstAttribute="bottom" secondItem="hk2-bv-XyB" secondAttribute="bottom" id="atc-i3-u7K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hk2-bv-XyB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web View" image="MapIcon" id="UXV-k3-vOI"/>
+                    <connections>
+                        <outlet property="webView" destination="smu-d9-Uwa" id="sOZ-6N-GRn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djn-Hh-v4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765.5999999999999" y="919.79010494752629"/>
+        </scene>
         <!--Map-->
         <scene sceneID="odY-5H-ZiR">
             <objects>
@@ -117,6 +152,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="85O-42-UgD"/>
                         <segue destination="T6G-m3-pvg" kind="relationship" relationship="viewControllers" id="sbc-t4-y28"/>
+                        <segue destination="Zgo-We-pox" kind="relationship" relationship="viewControllers" id="9jj-aJ-Xzf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QF0-5H-sJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
