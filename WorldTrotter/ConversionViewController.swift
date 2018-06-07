@@ -17,6 +17,24 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         print("ConversionViewController loaded its view.")
         updateCelsiusLabel()
+        
+        let hour = Calendar.current.component(.hour, from: Date())
+        if(isEvening(hour: hour)){
+            print("It's evening, setting color accordingly: hour is \(hour)")
+            self.view.backgroundColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+        } else {
+            print("It's morning, leaving color as default: hour is \(hour)")
+        }
+        
+        
+        
+    }
+    
+    func isEvening(hour:Int) -> Bool {
+        if 7...16 ~= hour {
+            return false
+        }
+        return true
     }
     
     var fahrenheitValue: Measurement<UnitTemperature>? {
